@@ -1,0 +1,2 @@
+include ':mapboxinterop'
+rootProject.name='mapboxinterop'
