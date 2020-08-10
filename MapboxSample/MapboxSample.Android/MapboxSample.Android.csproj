@@ -94,7 +94,7 @@
       <Name>MapboxInterop.Binding.Android</Name>
     </ProjectReference>
     <ProjectReference Include="..\MapboxSample\MapboxSample.csproj">
-      <Project>{4476E988-B21C-4A2F-9B86-0314D9D05363}</Project>
+      <Project>{2326D1A1-CDB2-4F9D-995E-582D4257BB8B}</Project>
       <Name>MapboxSample</Name>
     </ProjectReference>
   </ItemGroup>

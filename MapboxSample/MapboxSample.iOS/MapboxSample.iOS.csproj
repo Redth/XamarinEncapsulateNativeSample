@@ -129,8 +129,12 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\MapboxSample\MapboxSample.csproj">
-      <Project>{4476E988-B21C-4A2F-9B86-0314D9D05363}</Project>
+      <Project>{2326D1A1-CDB2-4F9D-995E-582D4257BB8B}</Project>
       <Name>MapboxSample</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MapboxInterop.Binding.iOS\MapboxInterop.Binding.iOS.csproj">
+      <Project>{A70EE1F2-B89D-4870-8571-4295A44A7610}</Project>
+      <Name>MapboxInterop.Binding.iOS</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

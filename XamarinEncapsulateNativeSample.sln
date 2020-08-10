@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapboxSample", "MapboxSampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapboxInterop.Binding.Android", "MapboxInterop.Binding.Android\MapboxInterop.Binding.Android.csproj", "{FCAD10F5-AE72-4796-808B-20FD5E435FEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapboxInterop.Binding.iOS", "MapboxInterop.Binding.iOS\MapboxInterop.Binding.iOS.csproj", "{A70EE1F2-B89D-4870-8571-4295A44A7610}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bindings", "Bindings", "{BFB29552-903D-4A95-9173-7D1709DF400C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,11 +77,27 @@ Global
 		{FCAD10F5-AE72-4796-808B-20FD5E435FEA}.Release|iPhone.Build.0 = Release|Any CPU
 		{FCAD10F5-AE72-4796-808B-20FD5E435FEA}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{FCAD10F5-AE72-4796-808B-20FD5E435FEA}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{A70EE1F2-B89D-4870-8571-4295A44A7610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A70EE1F2-B89D-4870-8571-4295A44A7610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A70EE1F2-B89D-4870-8571-4295A44A7610}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{A70EE1F2-B89D-4870-8571-4295A44A7610}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{A70EE1F2-B89D-4870-8571-4295A44A7610}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{A70EE1F2-B89D-4870-8571-4295A44A7610}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{A70EE1F2-B89D-4870-8571-4295A44A7610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A70EE1F2-B89D-4870-8571-4295A44A7610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A70EE1F2-B89D-4870-8571-4295A44A7610}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{A70EE1F2-B89D-4870-8571-4295A44A7610}.Release|iPhone.Build.0 = Release|Any CPU
+		{A70EE1F2-B89D-4870-8571-4295A44A7610}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{A70EE1F2-B89D-4870-8571-4295A44A7610}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA9380A0-E1F9-456B-807F-2D6E2004B600}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FCAD10F5-AE72-4796-808B-20FD5E435FEA} = {BFB29552-903D-4A95-9173-7D1709DF400C}
+		{A70EE1F2-B89D-4870-8571-4295A44A7610} = {BFB29552-903D-4A95-9173-7D1709DF400C}
 	EndGlobalSection
 EndGlobal
