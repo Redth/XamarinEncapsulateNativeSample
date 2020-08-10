@@ -25,23 +25,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="GoogleGson">
-      <Version>2.8.5</Version>
+    <PackageReference Include="GoogleGson" Version="2.8.5">
     </PackageReference>
-    <PackageReference Include="Naxam.SoLoader.Droid">
-      <Version>0.6.1.2</Version>
+    <PackageReference Include="Naxam.SoLoader.Droid" Version="0.6.1.2">
     </PackageReference>
-    <PackageReference Include="Square.OkHttp3">
-      <Version>3.14.2</Version>
+    <PackageReference Include="Square.OkHttp3" Version="3.14.2">
     </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat">
-      <Version>1.0.2-preview02</Version>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.0.2-preview02">
     </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.Core">
-      <Version>1.0.1-preview02</Version>
+    <PackageReference Include="Xamarin.AndroidX.Core" Version="1.0.1-preview02">
     </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils">
-      <Version>1.0.0-preview02</Version>
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0-preview02">
     </PackageReference>
   </ItemGroup>
 </Project>
