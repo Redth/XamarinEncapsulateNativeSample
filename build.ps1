@@ -3,6 +3,10 @@ $MAPBOX_DOWNLOADS_TOKEN = ""
 $MAPBOX_IOS_VERSIOn = "6.0.0"
 $MAPBOX_ANDROID_VERSION = "9.3.0"
 
+if (!($MAPBOX_DOWNLOADS_TOKEN)) {
+    throw "Fill out the `$MAPBOX_DOWNLOADS_TOKEN` in this script and try again."
+}
+
 $mapboxiOSSdkUrl = "https://api.mapbox.com/downloads/v2/mobile-maps/releases/ios/$MAPBOX_IOS_VERSION/mapbox-ios-sdk-dynamic-with-events.zip?access_token=$MAPBOX_DOWNLOADS_TOKEN"
 $mapboxAndroidSdkUrl = "https://api.mapbox.com/downloads/v2/mobile-maps/releases/android/$MAPBOX_ANDROID_VERSION/mapbox-android-sdk-all.zip?access_token=$MAPBOX_DOWNLOADS_TOKEN"
 
