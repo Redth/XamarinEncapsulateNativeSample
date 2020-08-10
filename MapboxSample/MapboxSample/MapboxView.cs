@@ -23,16 +23,28 @@ namespace MapboxSample
 		public int InitialZoom { get; set; } = 12;
 
 		public void AddMarker(double lat, double lng, string title, string snippet)
-		{
-			// Get renderer as IMapboxView and call AddMarker on it
-
-		}
-
+			=> MarkerAdded?.Invoke(this, new MapMarker
+			{
+				Latitude = lat,
+				Longitude = lng,
+				Title = title,
+				Snippet = snippet
+			});
+		
 		public void RaiseMarkerTapped(string title)
 			=> MarkerTapped?.Invoke(this, title);
 
 		public void RaiseMapReady()
 			=> MapReady?.Invoke(this, new EventArgs());
 
+		public event EventHandler<MapMarker> MarkerAdded;
+	}
+
+	public struct MapMarker
+	{
+		public double Latitude;
+		public double Longitude;
+		public string Title;
+		public string Snippet;
 	}
 }

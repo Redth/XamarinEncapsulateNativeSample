@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Foundation;
+using MapboxInterop;
 using MapboxSample;
 using MapboxSample.iOS;
 using UIKit;
@@ -12,10 +13,9 @@ using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(MapboxViewRendereriOS), typeof(MapboxView))]
 
-
 namespace MapboxSample.iOS
 {
-	class MapboxViewRendereriOS : Xamarin.Forms.Platform.iOS.ViewRenderer<MapboxView, UIView>
+	class MapboxViewRendereriOS : Xamarin.Forms.Platform.iOS.ViewRenderer<MapboxView, UIView>, IMapboxWrapperCallback
 	{
 		public static Dictionary<string, MapboxWrapper> Instances = new Dictionary<string, MapboxWrapper>();
 
@@ -29,6 +29,8 @@ namespace MapboxSample.iOS
 
 			if (e.OldElement != null)
 			{
+				Element.MarkerAdded -= Element_MarkerAdded;
+
 				// Unsubscribe from event handlers and cleanup any resources
 				if (Instances.ContainsKey(instanceId))
 					Instances.Remove(instanceId);
@@ -38,15 +40,26 @@ namespace MapboxSample.iOS
 			{
 				if (Control == null)
 				{
-					mapbox = new MapboxWrapper(this);
-					mapbox.OnCreate(null, Element.InitialLatitude, Element.InitialLongitude, Element.InitialZoom);
+					mapbox = new MapboxWrapper(this.Frame, this);
+					mapbox.Init();
 
 					// Add our instance to the static dictionary for mainactivity lifecycle events
 					Instances[instanceId] = mapbox;
 
 					SetNativeControl(mapbox.View);
 				}
+
+				Element.MarkerAdded += Element_MarkerAdded;
 			}
 		}
+
+		void Element_MarkerAdded(object sender, MapMarker e)
+			=> mapbox?.AddMarker(e.Latitude, e.Longitude, e.Title, e.Snippet);
+
+		public void MarkerClicked(string title)
+			=> Element?.RaiseMarkerTapped(title);
+
+		public void MapReady()
+			=> Element?.RaiseMapReady();
 	}
 }

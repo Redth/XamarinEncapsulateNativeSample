@@ -38,6 +38,8 @@ namespace MapboxSample.Droid
 
 			if (e.OldElement != null)
 			{
+				Element.MarkerAdded -= Element_MarkerAdded;
+
 				// Unsubscribe from event handlers and cleanup any resources
 				if (Instances.ContainsKey(instanceId))
 					Instances.Remove(instanceId);
@@ -56,22 +58,21 @@ namespace MapboxSample.Droid
 
 					SetNativeControl(mapbox.View);
 				}
+
+				Element.MarkerAdded += Element_MarkerAdded;
 			}
 		}
 
+		void Element_MarkerAdded(object sender, MapMarker e)
+			=> mapbox?.AddMarker(e.Latitude, e.Longitude, e.Title, e.Snippet);
+
 		public void MapReady()
-		{
-			Element?.RaiseMapReady();
-		}
+			=> Element?.RaiseMapReady();
 
 		public void MarkerClicked(string title)
-		{
-			Element?.RaiseMarkerTapped(title);
-		}
+			=> Element?.RaiseMarkerTapped(title);
 
 		public void AddMarker(double lat, double lng, string title, string snippet)
-		{
-			mapbox.AddMarker(lat, lng, title, snippet);
-		}
+			=> mapbox.AddMarker(lat, lng, title, snippet);
 	}
 }
