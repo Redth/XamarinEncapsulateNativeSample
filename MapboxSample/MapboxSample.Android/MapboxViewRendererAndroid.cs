@@ -16,7 +16,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
 
-[assembly: ExportRenderer(typeof(MapboxViewRendererAndroid), typeof(MapboxView))]
+[assembly: ExportRenderer(typeof(MapboxView), typeof(MapboxViewRendererAndroid))]
 
 namespace MapboxSample.Droid
 {

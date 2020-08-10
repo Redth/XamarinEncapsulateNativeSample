@@ -11,7 +11,7 @@ using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(MapboxViewRendereriOS), typeof(MapboxView))]
+[assembly: ExportRenderer(typeof(MapboxView), typeof(MapboxViewRendereriOS))]
 
 namespace MapboxSample.iOS
 {
