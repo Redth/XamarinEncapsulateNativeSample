@@ -29,13 +29,13 @@
     </PackageReference>
     <PackageReference Include="Naxam.SoLoader.Droid" Version="0.6.1.2">
     </PackageReference>
-    <PackageReference Include="Square.OkHttp3" Version="3.14.2">
+    <PackageReference Include="Square.OkHttp3" Version="4.2.2">
     </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.0.2-preview02">
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.1.0.1">
     </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.Core" Version="1.0.1-preview02">
+    <PackageReference Include="Xamarin.AndroidX.Core" Version="1.2.0.1">
     </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0-preview02">
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils" Version="1.0.0.1">
     </PackageReference>
   </ItemGroup>
 </Project>
