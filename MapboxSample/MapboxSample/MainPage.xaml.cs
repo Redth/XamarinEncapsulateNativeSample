@@ -17,5 +17,24 @@ namespace MapboxSample
 		{
 			InitializeComponent();
 		}
+
+		int markerCount = 1;
+
+		private void Button_Clicked(object sender, EventArgs e)
+		{
+			var rnd = new Random();
+
+			var variation = (rnd.Next(0, 10) / 10d);
+
+			if (rnd.Next(0, 1) == 1)
+				variation *= -1;
+
+			var lat = 42.09221583651157 + variation;
+			var lng = -82.4735913540103 + variation;
+			this.map.AddMarker(lat, lng, $"Marker {markerCount++}", "Details");
+		}
+
+		async void map_MarkerTapped(object sender, string e)
+			=> await DisplayAlert("Marker Tapped", $"Marker '{e}' was tapped.", "OK");
 	}
 }
