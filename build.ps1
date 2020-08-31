@@ -23,6 +23,13 @@ if ($IsMacOS) {
 if (!(Test-Path -Path "./externals/mapbox-android.zip")) {
     Invoke-WebRequest -Uri $mapboxAndroidSdkUrl -OutFile "./externals/mapbox-android.zip"
     Expand-Archive -Path "./externals/mapbox-android.zip" -DestinationPath "./externals/mapbox-android" -Force
+
+    Invoke-WebRequest -Uri "https://repo1.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-sdk-turf/5.4.0/mapbox-sdk-turf-5.4.0.jar" -OutFile "./externals/mapbox-android/mapbox-sdk-turf.jar"
+    Invoke-WebRequest -Uri "https://repo1.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-android-telemetry/5.1.0/mapbox-android-telemetry-5.1.0.aar" -OutFile "./externals/mapbox-android/mapbox-android-telemetry.aar"
+    Invoke-WebRequest -Uri "https://repo1.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-sdk-geojson/5.3.0/mapbox-sdk-geojson-5.3.0.jar" -OutFile "./externals/mapbox-android/mapbox-sdk-geojson.jar"
+    Invoke-WebRequest -Uri "https://repo1.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-android-gestures/0.7.0/mapbox-android-gestures-0.7.0.aar" -OutFile "./externals/mapbox-android/mapbox-android-gestures.aar"
+    Invoke-WebRequest -Uri "https://jcenter.bintray.com/com/mapbox/mapboxsdk/mapbox-android-accounts/0.7.0/mapbox-android-accounts-0.7.0.aar" -OutFile "./externals/mapbox-android/mapbox-android-accounts.aar"
+    Invoke-WebRequest -Uri "https://repo1.maven.org/maven2/com/mapbox/mapboxsdk/mapbox-android-core/2.0.1/mapbox-android-core-2.0.1.aar" -OutFile "./externals/mapbox-android/mapbox-android-core.aar"
 }
 
 Push-Location "./MapboxInterop.Native.Android/"

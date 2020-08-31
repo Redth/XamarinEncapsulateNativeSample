@@ -50,7 +50,7 @@ public class MapboxWrapper {
             public void onMapReady(@NonNull MapboxMap mapboxMap) {
 
                 map = mapboxMap;
-                mapboxMap.setStyle(Style.DARK, new Style.OnStyleLoaded() {
+                mapboxMap.setStyle(Style.MAPBOX_STREETS, new Style.OnStyleLoaded() {
                     @Override
                     public void onStyleLoaded(@NonNull Style style) {
                         callbackListener.mapReady();

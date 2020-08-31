@@ -107,5 +107,20 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAarLibrary Include="..\..\externals\mapbox-android\mapbox-android-sdk-9.3.0.aar">
+      <Link>mapbox-android-sdk.aar</Link>
+    </AndroidAarLibrary>
+    <AndroidAarLibrary Include="..\..\externals\mapbox-android\mapbox-android-accounts.aar" />
+    <AndroidAarLibrary Include="..\..\externals\mapbox-android\mapbox-android-gestures.aar" />
+    <AndroidAarLibrary Include="..\..\externals\mapbox-android\mapbox-android-telemetry.aar" />
+    <AndroidAarLibrary Include="..\..\externals\mapbox-android\mapbox-android-core.aar" />
+
+    <AndroidNativeLibrary Include="..\..\externals\mapbox-android\obj\arm64-v8a\libmapbox-gl.so" />
+    <AndroidNativeLibrary Include="..\..\externals\mapbox-android\obj\armeabi-v7a\libmapbox-gl.so" />
+    <AndroidNativeLibrary Include="..\..\externals\mapbox-android\obj\x86\libmapbox-gl.so" />
+    <AndroidNativeLibrary Include="..\..\externals\mapbox-android\obj\x86_64\libmapbox-gl.so" />
+
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

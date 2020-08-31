@@ -22,6 +22,9 @@
     <LibraryProjectZip Include="..\MapboxInterop.Native.Android\mapboxinterop\build\outputs\aar\mapboxinterop-debug.aar">
       <Link>mapboxinterop.aar</Link>
     </LibraryProjectZip>
+
+    <EmbeddedReferenceJar Include="..\externals\mapbox-android\mapbox-sdk-geojson.jar" />
+    <EmbeddedReferenceJar Include="..\externals\mapbox-android\mapbox-sdk-turf.jar" />
   </ItemGroup>
 
   <ItemGroup>
