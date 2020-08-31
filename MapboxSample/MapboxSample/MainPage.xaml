@@ -1,16 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:local="clr-namespace:MapboxSample"
-             mc:Ignorable="d"
-             x:Class="MapboxSample.MainPage">
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:MapboxSample"
+	mc:Ignorable="d"
+	x:Class="MapboxSample.MainPage">
 
-    <Grid>
-        <local:MapboxView x:Name="map" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+	<Grid>
+		<local:MapboxView x:Name="map"
+			InitialLatitude="42.09221583651157"
+			InitialLongitude="-82.4735913540103"
+			InitialZoom="7"
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="FillAndExpand"
+			AccessToken=""
+			MarkerTapped="map_MarkerTapped"/>
 
-        <Button VerticalOptions="End" Text="Add Marker" Margin="20" BackgroundColor="Black" TextColor="White" CornerRadius="10" />
-    </Grid>
+		<Button VerticalOptions="End" Text="Add Marker" Margin="40" BackgroundColor="Black" TextColor="White" CornerRadius="10" Clicked="Button_Clicked" />
+	</Grid>
 
 </ContentPage>
