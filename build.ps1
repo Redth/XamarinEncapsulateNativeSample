@@ -43,9 +43,9 @@ if ($IsWindows) {
 Pop-Location
 
 if ($IsMacOS) {
-    & "xcodebuild" "-sdk iphoneos -project ./MapboxInterop.Native.iOS/MapboxInterop.xcodeproj"
-    & "xcodebuild" "-sdk iphonesimulator -project ./MapboxInterop.Native.iOS/MapboxInterop.xcodeproj"
-    & "lipo" "-create -o ./MapboxInterop.Native.iOS/build/Release-iphoneos/MapboxInterop.framework/MapboxInterop ./MapboxInterop.Native.iOS/build/Release-iphoneos/MapboxInterop.framework/MapboxInterop ./MapboxInterop.Native.iOS/build/Release-iphonesimulator/MapboxInterop.framework/MapboxInterop"
+    & xcodebuild -sdk iphoneos -project ./MapboxInterop.Native.iOS/MapboxInterop.xcodeproj
+    & xcodebuild -sdk iphonesimulator -project ./MapboxInterop.Native.iOS/MapboxInterop.xcodeproj
+    & lipo -create -o ./MapboxInterop.Native.iOS/build/Release-iphoneos/MapboxInterop.framework/MapboxInterop ./MapboxInterop.Native.iOS/build/Release-iphoneos/MapboxInterop.framework/MapboxInterop ./MapboxInterop.Native.iOS/build/Release-iphonesimulator/MapboxInterop.framework/MapboxInterop
 }
 
 
